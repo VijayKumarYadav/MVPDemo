@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Demo</string>
+    <string name="category_item">Category item</string>
+    <string name="welcome_text">Welcome to our site!</string>
+    <string name="most_view_pic">Most view category picture</string>
+    <string name="go_category">Go to categories</string>
+    <string name="i_am_interested_in">I am interested in:</string>
+    <string name="item_icon">item icon</string>
+    <string name="result">Result</string>
+
+
+</resources>
