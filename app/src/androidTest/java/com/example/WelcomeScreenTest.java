@@ -21,7 +21,9 @@ import static org.hamcrest.core.AllOf.allOf;
  * Copyright (C) VijayK
  */
 @RunWith(AndroidJUnit4.class)
-// test for WelcomeScreen
+/**
+ *  UI test for WelcomeScreen
+ */
 public class WelcomeScreenTest {
 
     @Rule
@@ -30,6 +32,7 @@ public class WelcomeScreenTest {
 
     @Test
     public void testInitUi() {
+        // test if ui is visible with proper content
         onView(withId(R.id.welcome_view)).check(matches(isDisplayed()));
         onView(allOf(withId(R.id.welcome_view), withText(R.string.welcome_text)));
         onView(withId(R.id.welcome_most_view_cat_image)).check(matches(isDisplayed()));

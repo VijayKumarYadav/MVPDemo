@@ -17,6 +17,9 @@ import com.example.tracking.data.db.tables.Category;
 
 import java.util.List;
 
+/**
+ * Custom grid on top of {@link GridLayout} to populate the {@link Category} data based on category image click (weight).
+ */
 public class CustomGrid extends GridLayout {
 
     private Listener mListener;
@@ -121,12 +124,24 @@ public class CustomGrid extends GridLayout {
         return max;
     }
 
+    /**
+     * Listener to listen image for image clicked or to get {@link android.graphics.drawable.Drawable} for image.
+     */
     public interface Listener {
+        /**
+         * Called when image is clicked.
+         */
         void onImageClicked(View v);
 
+        /**
+         * Called to get {@link android.graphics.drawable.Drawable} for {@link ImageView}.
+         */
         void getImage(String url, ImageView view);
     }
 
+    /**
+     * Set the Listener to listen events.
+     */
     public void setListener(Listener listener) {
         mListener = listener;
     }

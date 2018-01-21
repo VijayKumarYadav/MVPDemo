@@ -20,6 +20,12 @@ public class WelcomePresenter extends BasePresenter {
         super(dataManager);
     }
 
+    /**
+     * Attaches the presenter to given view.
+     *
+     * @param context  context for view to populate its data.
+     * @param contract Contract to communicate with view.
+     */
     public void onAttach(final Context context, final WelcomeContract contract) {
         super.onAttach(contract);
         mContract = contract;
@@ -32,6 +38,9 @@ public class WelcomePresenter extends BasePresenter {
         });
     }
 
+    /**
+     * Gets the most url category url. Call will be forwarded to {@link DataManager} which will decided where to get the data.
+     */
     void getMostViewImageUrl() {
         mDataManager.getMostViewedUrl((data, status) -> mContract.loadImage(data));
     }

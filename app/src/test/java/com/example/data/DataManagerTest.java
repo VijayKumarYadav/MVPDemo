@@ -51,6 +51,9 @@ public class DataManagerTest extends RobolectricTest {
         assertNotNull(mDataManager);
     }
 
+    /**
+     * Test {@link DataManager} flow to get data when the data is saved on {@link com.example.tracking.data.Tracking} module.
+     */
     @Test
     public void testGetCategoryWhenDataIsSaved() throws InterruptedException {
         Category category = new Category("title", "url", 1, "dateTaken");
@@ -60,6 +63,9 @@ public class DataManagerTest extends RobolectricTest {
         });
     }
 
+    /**
+     * Test {@link DataManager} flow to get data when the data is not saved on {@link com.example.tracking.data.Tracking} module.
+     */
     @Test
     public void testGetCategoryWhenDataIsNotSaved() {
         Category category = new Category("title", "url", 1, "dateTaken");
@@ -69,6 +75,9 @@ public class DataManagerTest extends RobolectricTest {
         });
     }
 
+    /**
+     * Test {@link DataManager} flow to get images from network.
+     */
     @Test
     public void testGetImages() {
         Category category = new Category("title", "url", 1, "dateTaken");
@@ -78,6 +87,9 @@ public class DataManagerTest extends RobolectricTest {
         });
     }
 
+    /**
+     * Test category images click is getting saved properly.
+     */
     @Test
     public void testTrackClick() {
         doAnswer(new Answer<Void>() {

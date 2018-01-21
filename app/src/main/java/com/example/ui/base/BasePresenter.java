@@ -23,11 +23,17 @@ public class BasePresenter {
         mDataManager = dataManager;
     }
 
+    /**
+     * Attaches the presenter to given view.
+     */
     public void onAttach(BaseView mvpView) {
         mContract = mvpView;
         mContract.onPresenterAttached(this);
     }
 
+    /**
+     * Loads images to given {@link ImageView}. Keeps weak reference of images view.
+     */
     public void loadImage(Context context, String url, int drawable, ImageView imageView) {
         imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         imageView.setImageDrawable(context.getResources().getDrawable(drawable));

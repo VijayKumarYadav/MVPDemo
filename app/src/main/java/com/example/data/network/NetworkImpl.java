@@ -46,6 +46,9 @@ public class NetworkImpl implements Network {
     private DataInputStream dataInputStream;
     private ByteArrayOutputStream byteArrayOutputStream;
 
+    /**
+     * Gets instance of network module.
+     */
     public static NetworkImpl getInstance() {
         synchronized (sLock) {
             if (INSTANCE == null) {
@@ -72,6 +75,9 @@ public class NetworkImpl implements Network {
         return Uri.parse(url).toString();
     }
 
+    /**
+     * Checks if network is available.
+     */
     public boolean isNetworkAvailable(Context context) {
         ConnectivityManager connectivityManager =
                 (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -80,6 +86,9 @@ public class NetworkImpl implements Network {
         return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
     }
 
+    /**
+     * Gets server response for given url.
+     */
     public String getResponse(String urlStr) {
         String responseStr = null;
 
@@ -164,6 +173,9 @@ public class NetworkImpl implements Network {
         }
     }
 
+    /**
+     * Network call to load image from url.
+     */
     public static class ImageLoader {
 
         public Drawable loadImageFromUrl(String url) {

@@ -16,7 +16,10 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 
-// test for CategoryScreen
+/**
+ * UI test for CategoryScreen
+ */
+
 public class ItemDetailScreenTest {
 
     @Rule
@@ -25,7 +28,7 @@ public class ItemDetailScreenTest {
 
     @Test
     public void testInitUi() {
-        // ui should have following components
+        // test if ui is visible with proper content
         onView(withId(R.id.item_detail_title)).check(matches(isDisplayed()));
         onView(withId(R.id.item_detail_details)).check(matches(isDisplayed()));
         onView(withId(R.id.item_detail_icon)).check(matches(isDisplayed()));

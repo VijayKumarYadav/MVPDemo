@@ -34,6 +34,9 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+/**
+ * Test for {@link com.example.tracking.data.db.CategoryDao}.
+ */
 @RunWith(AndroidJUnit4.class)
 public class CategoryDaoTest {
 

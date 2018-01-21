@@ -18,10 +18,4 @@ public interface CategoryContract extends BaseView {
      * Loaded category list.
      */
     void populateCategory(List<Category> data);
-
-    interface  test {
-           class A {
-
-          }
-    }
 }

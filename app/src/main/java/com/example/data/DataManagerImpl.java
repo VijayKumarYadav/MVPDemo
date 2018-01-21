@@ -19,6 +19,9 @@ import java.lang.ref.WeakReference;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * Implementation of {@link DataManager}.
+ */
 public class DataManagerImpl implements DataManager {
 
     private static DataManagerImpl sDataManagerImpl;
@@ -27,6 +30,7 @@ public class DataManagerImpl implements DataManager {
     private AppExecutors mAppExecutors;
     private ConcurrentHashMap<String, SoftReference<Drawable>> drawableMap;
 
+    // success status code, will be used for successful operation.
     public static final String SUCCESS = "Success";
 
     private DataManagerImpl(Tracking tracking, Network network) {
@@ -36,6 +40,9 @@ public class DataManagerImpl implements DataManager {
         drawableMap = new ConcurrentHashMap<String, SoftReference<Drawable>>();
     }
 
+    /**
+     * Gets instance of {@link DataManager} module.
+     */
     public static DataManagerImpl getInstance(Tracking tracking, Network network) {
         synchronized (DataManagerImpl.class) {
             if (sDataManagerImpl == null) {
@@ -148,6 +155,9 @@ public class DataManagerImpl implements DataManager {
         mAppExecutors.networkIO().execute(runnable);
     }
 
+    /**
+     * Dispose the instance, used for testing.
+     */
     public static void dispose() {
         sDataManagerImpl = null;
     }

@@ -20,7 +20,9 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.core.AllOf.allOf;
 
-// test for CategoryScreen
+/**
+ * UI test for CategoryScreen
+ */
 @RunWith(AndroidJUnit4.class)
 public class CategoryScreenTest {
 
@@ -30,7 +32,7 @@ public class CategoryScreenTest {
 
     @Test
     public void testInitUi() {
-        // ui should have following components
+        // test if ui is visible with proper content
         onView(withId(R.id.cat_text)).check(matches(isDisplayed()));
         onView(allOf(withId(R.id.cat_text), withText(R.string.i_am_interested_in)));
         onView(withId(R.id.categories)).check(matches(isDisplayed()));

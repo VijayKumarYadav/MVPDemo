@@ -20,6 +20,9 @@ public class TrackingImpl implements Tracking {
         mCategoryDao = dao;
     }
 
+    /**
+     * Gets instance of {@link Tracking}.
+     */
     public static TrackingImpl getInstance(CategoryDao dao) {
         synchronized (TrackingImpl.class) {
             if (sTracking == null) {
@@ -67,7 +70,7 @@ public class TrackingImpl implements Tracking {
     }
 
     /**
-     * Dispose instance.
+     * Dispose instance. Used for testing.
      */
     public void disposeInstance() {
         sTracking = null;
