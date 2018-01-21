@@ -5,8 +5,8 @@ This sample is based on MVP Architecture guidelines and consisting of 2 modules 
 
 It implement the following concept -
 
-  *  On the first launch of application, user will see 6 random images coming from**flikr**(we call it category images) and these will be saved by tracking modules to show the same images in next application launches.
-  * Clicking any one of them will leads to next screen where 12 random images will be shown from**flikr**again. Clicking further on them will show details of that image.
+  *  On the first launch of application, user will see 6 random images coming from **flikr** (we call it category images) and these will be saved by tracking modules to show the same images in next application launches.
+  * Clicking any one of them will leads to next screen where 12 random images will be shown from **flikr** again. Clicking further on them will show details of that image.
   * App keeps track of every click user made on the category images.
   * Now when user relaunch the application, he will see a welcome page showing him the most clicked category images and a way to go on category images screen. 
   * One most important thing of category images is that they will be rendered with weight and weight will be decided by the number of click user made to that particular images. 
