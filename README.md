@@ -19,7 +19,7 @@ It implement the following concept -
  ##### Things to note - 
  
  * This application only run and tested for portrait mode.
- * Application provides Accessibility support but not tested. 
+ * Application provides Accessibility support but not tested for this. 
  * Application is flexible enough to support easily any kind of feature changes and different locale.  
  * Sample is loaded, for showcase, with JUnit (using Robolectric, Mockito),Instrumented test (AndroidJunitRunner), UI and Integration testing With espresso, Although it is possible to add more test cases.
  * _Last but not least_, Worth to mention that --- To get random images application is using -   https://api.flickr.com/services/feeds/photos_public.gne which seems to produce random images on every hit but with some in-appropriate content so to filter the content *tag* is used but with *tag* server return same images for continuous hit.
