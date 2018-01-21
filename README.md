@@ -1,7 +1,9 @@
 ## MVPDemo
 
 #### Summary  
-This sample is based on MVP Architecture guidelines and consisting 2 modules - UI Module, Tracking modules and based on following concept -
+This sample is based on MVP Architecture guidelines and consisting of 2 modules - UI Module & Tracking modules.
+
+It implement the following concept -
 
   *  On the first launch of application, user will see 6 random images coming from**flikr**(we call it category images) and these will be saved by tracking modules to show the same images in next application launches.
   * Clicking any one of them will leads to next screen where 12 random images will be shown from**flikr**again. Clicking further on them will show details of that image.
@@ -14,7 +16,7 @@ This sample is based on MVP Architecture guidelines and consisting 2 modules - U
    
  One important thing to note that this sample project is not using any external lib except **Room**. https://developer.android.com/training/data-storage/room/index.html
  
- #####Things to note - 
+ ##### Things to note - 
  
  * This application only run and tested for portrait mode.
  * Application provides Accessibility support but not tested. 
